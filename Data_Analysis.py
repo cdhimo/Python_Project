@@ -4,11 +4,10 @@ import pandas as pd
 from PIL import Image
 st.markdown('<span style="font-family: Times New Roman; font-size: 50px;">Data Analysis of Crime Rate</span>',
             unsafe_allow_html=True)
-path = "C:/Users/cdhim/OneDrive - Bentley University/CS230/final/"
-df = pd.read_csv(path + "bostoncrime2023_7000_sample.csv", index_col="INCIDENT_NUMBER")
+df = pd.read_csv("bostoncrime2023_7000_sample.csv", index_col="INCIDENT_NUMBER")
 df = df.dropna()
-st_image = Image.open("C:/Users/cdhim/OneDrive - Bentley University/CS230/final/shutterstock_216617104.0.jpg")
-st_image2 = Image.open("C:/Users/cdhim/OneDrive - Bentley University/CS230/final/Boston-MA-Crime-Rate.jpg")
+st_image = Image.open("shutterstock_216617104.0.jpg")
+st_image2 = Image.open("Boston-MA-Crime-Rate.jpg")
 col1, col2 = st.columns(2)
 
 with col1:
