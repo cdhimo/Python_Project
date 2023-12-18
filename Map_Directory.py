@@ -4,7 +4,7 @@ import pydeck as pdk
 
 st.title(":blue[Maps of Boston for Data Visualization]:world_map:")
 path = "C:/Users/cdhim/OneDrive - Bentley University/CS230/final/"
-df = pd.read_csv(path + "bostoncrime2023_7000_sample.csv", index_col="INCIDENT_NUMBER")
+df = pd.read_csv("bostoncrime2023_7000_sample.csv", index_col="INCIDENT_NUMBER")
 pd.set_option("display.max_rows", None, "display.max_columns", None, 'display.width', None, 'max_colwidth', None)
 df = df.dropna()
 df.rename(columns={"Lat": 'lat', "Long": "lon"}, inplace=True)
